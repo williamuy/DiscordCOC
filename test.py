@@ -30,6 +30,12 @@ class Barcher(object):
     
 
 # Usage
-barcher = Barcher('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjU1ODUzNjM1LTA1ZTAtNDNiZS1iZjE4LWU3YjgxYjUxZDUzYSIsImlhdCI6MTcxMzM3OTE0Niwic3ViIjoiZGV2ZWxvcGVyLzY5NGRhZDY2LTI1MTktMWRjMi0zNmU3LTRlMmZhYWY5OTRiNSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjY3LjE2OC40NS4yMzMiLCIyMDUuMTc1LjEwNi43NyJdLCJ0eXBlIjoiY2xpZW50In1dfQ.CeKtjpI_LNsSB6utOdtTYrSpuDoDyCUGN7W0nWU3l8u0FO8YCP_eJdk5VH2dGadoCSgEzu7d-iyy2tNV-X1YCQ')
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+COC_API_KEY = os.getenv("COC_API_KEY")
+
+
+barcher = Barcher(COC_API_KEY)
 clan_info = barcher.find_clan('#2QRYUV9VP')
 print(clan_info)
